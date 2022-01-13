@@ -960,8 +960,8 @@ and (max-width: 350px)  {
 }
 
 /* For medium devices */
-@media screen and (max-width: 568px)
-and (min-device-width: 351px){
+@media screen and (min-width: 351px)
+and (max-width: 568px){
     .home__content{
         grid-template-columns: max-content 1fr 1fr;
     }
