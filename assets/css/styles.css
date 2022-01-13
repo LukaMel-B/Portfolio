@@ -58,18 +58,7 @@
     --z-modal: 1000;
 }
 
-/* Font size for large devices */
-@media screen and (min-width: 968px) {
-    :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.5rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
-    }
-}
+
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
@@ -201,19 +190,7 @@ img{
     color: var(--first-color);
 }
 
-@media screen and (max-width: 767px) {
-    .nav__menu{
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-        border-radius: 1.5rem 1.5rem 0 0;
-        transition: .3s;
-    }
-}
+
 
 .nav__list{
     grid-template-columns: repeat(3, 1fr);
@@ -934,7 +911,8 @@ img{
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen
+and (max-width: 350px)  {
     .container{
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
@@ -977,12 +955,13 @@ img{
     }
 
     .project__img{
-        width: 260px;
+        width: 200px;
     }
 }
 
 /* For medium devices */
-@media screen and (max-width: 568px){
+@media screen and (max-width: 568px)
+and (min-device-width: 351px){
     .home__content{
         grid-template-columns: max-content 1fr 1fr;
     }
@@ -998,7 +977,9 @@ img{
 
     .about__container,
     .portfolio__content,
-    .project__container{
+    .project__container,
+    .contact__container,
+    .footer__container{
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1013,4 +994,30 @@ img{
     }
 }
 
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .nav__menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
 /* For large devices */
