@@ -1012,7 +1012,7 @@ and (max-width: 768px){
     }
 }
     
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) and (max-width: 1023px) {
     .nav__menu{
         position: fixed;
         bottom: -100%;
@@ -1025,21 +1025,9 @@ and (max-width: 768px){
         transition: .3s;
     }
 }
-/* For large devices */
-/* Font size for large devices */
-@media screen and (min-width: 968px) {
-    :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.5rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
-    }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1000px) {
+
+@media screen and (min-width: 768px) {
     .container{
         margin-left: auto;
         margin-right: auto;
@@ -1178,8 +1166,105 @@ and (max-width: 768px){
 
     .project{
 text-align: initial;    }
-}
 
 .project__bg{
     background: none;
+}
+
+.project__container{
+    background-color: var(--first-color-second);
+    border-radius: 1rem;
+    padding: 3rem 2.5rem 0;
+    grid-template-columns: 1fr max-content;
+    column-gap: 3rem;
+}
+
+.project__data{
+    padding-top: .8rem;
+}
+
+.footer__container{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.footer__bg{
+    padding: 3rem 0 3.5rem;
+}
+
+.footer__links{
+    flex-direction: row;
+    column-gap: 2rem;
+}
+
+.footer__socials{
+    justify-self: flex-end;
+}
+
+.footer__copy{
+    margin-top: 4.5rem;
+}
+}
+
+/* For large devices */
+/* Font size for large devices */
+
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header,
+    .main,
+    .footer__container{
+        padding: 0;
+    }
+
+    .home__blob{
+        width: 320px;
+    }
+
+    .home__social{
+        transform: translateX(-6rem);
+    }
+
+    .services__container{
+        grid-template-columns: repeat(3,238px);
+    }
+
+    .portfolio__container{
+        column-gap: 5rem;
+    }
+
+    .swiper-portfolio-icon{
+        font-size: 3.5rem;
+    }
+
+    .swiper-button-prev{
+        left: -3.5rem
+    }
+
+    .swiper-button-next{
+        right: -3.5rem;
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets{
+        bottom: -4.5rem;
+    }
+
+    .contact__form{
+        width: 460px;
+    }
+
+    .contact__inputs{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
